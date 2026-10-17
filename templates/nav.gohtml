@@ -1,7 +1,7 @@
 {{define "nav"}}
 {{$page := .Page}}
 <nav class="site-nav" aria-label="Main navigation">
-    <a class="site-nav__brand" href="">The Hub</a>
+    <a class="site-nav__brand" href="index.html">The Hub</a>
     <div class="site-nav__links">
         <a href="index.html" {{if eq $page "index"}}aria-current="page"{{end}}>My Home</a>
         <a href="my-course.html" {{if eq $page "my-course"}}aria-current="page"{{end}}>My Course</a>
