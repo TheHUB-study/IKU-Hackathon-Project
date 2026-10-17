@@ -1,7 +1,13 @@
 {{define "nav"}}
 {{$page := .Page}}
-<nav>
-{{range .Nav}} // Parse in data from go file
-{{end}}
+<nav class="site-nav" aria-label="Main navigation">
+    <a class="site-nav__brand" href="index.html">The Hub</a>
+    <div class="site-nav__links">
+        <a href="index.html" {{if eq $page "index"}}aria-current="page"{{end}}>My Home</a>
+        <a href="my-course.html" {{if eq $page "my-course"}}aria-current="page"{{end}}>My Course</a>
+        <a href="my-learning.html" {{if eq $page "my-learning"}}aria-current="page"{{end}}>My Learning</a>
+        <a href="my-societies.html" {{if eq $page "my-societies"}}aria-current="page"{{end}}>My Societies</a>
+        <a href="my-calendar.html" {{if eq $page "my-calendar"}}aria-current="page"{{end}}>My Calendar</a>
+    </div>
 </nav>
 {{end}}
