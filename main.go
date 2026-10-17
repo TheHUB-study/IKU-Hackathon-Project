@@ -33,6 +33,26 @@ func main() {
 		Title: "Home Hub",
 	})
 
+	createPageFromTemplate("my-calendar", page{
+		Page:  "my-calendar",
+		Title: "Calendar Hub",
+	})
+
+	createPageFromTemplate("my-course", page{
+		Page:  "my-course",
+		Title: "Course Hub",
+	})
+
+	createPageFromTemplate("my-learning", page{
+		Page:  "my-learning",
+		Title: "Learning Hub",
+	})
+
+	createPageFromTemplate("my-societies", page{
+		Page:  "my-societies",
+		Title: "Societies Hub",
+	})
+
 }
 
 func createPageFromTemplate(name string, page page) {
