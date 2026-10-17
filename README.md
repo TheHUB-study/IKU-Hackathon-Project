@@ -21,4 +21,12 @@ If this project was to be scaled up, we would work to integrate various universi
 
 ### AI Prompts
 
-""
+"We're starting a project for the IKU Womxan in Stem hackathon. We are entering the Society Track: The First Step. The objective is to build a solution to a real world problem that we've personally experienced during a transition, particularly starting university or entering technology. We want assess the feasability and quality of our idea against the following criteria: 1. Technical Complexity 2. Problem Definition & Impact 3. UX/UI & System Responsiveness 4. Presentation & Code Quality."
+
+"University information is scattered across multiple platforms - degree and course information, society updates, calendars, and more. We want to build a collated, interactive feed that brings it together, with search and an AI agent that answers student questions using feed content and newly provided information. The long-term version would integrate with university platforms and social media, with universities as stakeholders."
+
+"The users benefitting from impact would be new university students who want a holistic view of the university experience. The aim is to reduce the friction of searching across services and help students understand how different parts of university life fit together. Our firsthand example is having lecturers use Teams, EdStem, Panopto, and Blackboard/Canvas, while society updates came through WhatsApp and Instagram, and the university calendar lived separately on Celcat."
+
+"Our minimum viable product would be to display course structure and module weightings, an assignment and lecture hub, personalised society updates and upcoming events, an integrated calendar, and an AI agent that answers student querues based on the feed and supplied information."
+
+"Constraints: we are two-person team: one computer science student with frontend design experience, and one electronic and information engineering student with basic coding experience. We have one day to get the demo working, and our preferred stack is such Python, C/C++, HTML, CSS, JavaScript, Java, or SQL. We want to avoid burning ourselves out!!!."
