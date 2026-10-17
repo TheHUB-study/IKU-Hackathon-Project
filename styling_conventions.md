@@ -10,7 +10,7 @@ Based on the conventional commits styling convention and https://gist.github.com
 - style: improve code style
 - perf: type of refactor that improves the perfomance of the application
 - refactor: rewriting or restructuring code (doesn't change behaviour)
-- build: "changes involving builtdtools, dependencies, project version"
+- build: "changes involving build tools, dependencies, project version"
 - chore: anything else that does not fit into the categories above
 
 ## Branch naming conventions:
