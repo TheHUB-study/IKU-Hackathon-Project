@@ -3,7 +3,7 @@ by Irede and Chizara
 
 ## Overall Project Idea
 
-After brainstorming, we came up with XXX, a web application for students that collates information from different sources together whether that be course information, assignment deadlines or society events into one platform to support students getting a comprehensive and simplified view of their university life and committments.
+After brainstorming, we came up with The Hub, a web application for students that collates information from different sources together whether that be course information, assignment deadlines or society events into one platform to support students getting a comprehensive and simplified view of their university life and committments.
 
 From our first year, we typically found that we would have to search different platforms and webpages for different pieces of information. For example, EIE at Imperial uses Teams, Canvas, Panopto and Edstem to upload lecture recordings, submit courseworks/project and discuss with coursemates. Ontop of that, society information was kept largely separate, with Instagram being the most reliable source to get any updates about events going on. This was not only very overwhelming but also felt that we would essentially play an endless game of catch up. This is why we wanted to create an application that students could easily access and navigate through...
 
@@ -30,3 +30,9 @@ If this project was to be scaled up, we would work to integrate various universi
 "Our minimum viable product would be to display course structure and module weightings, an assignment and lecture hub, personalised society updates and upcoming events, an integrated calendar, and an AI agent that answers student querues based on the feed and supplied information."
 
 "Constraints: we are two-person team: one computer science student with frontend design experience, and one electronic and information engineering student with basic coding experience. We have one day to get the demo working, and our preferred stack is such Python, C/C++, HTML, CSS, JavaScript, Java, or SQL. We want to avoid burning ourselves out!!!."
+
+### Online Sources
+
+https://www.geeksforgeeks.org/html/html-cheat-sheet/
+
+- Used for gotemplate file creation
