@@ -2,15 +2,71 @@
 <body>
     {{template "nav" . }}
 
-    <main>
-        <section>
+    <main class="calendar-page">
+        <section class="calendar-intro">
+            <span class="eyebrow calendar-intro__eyebrow">Your week, at a glance</span>
             <h1>My Calendar</h1>
-            <p>Page containing an overview of timings for different societies, classes and blah...</p>
+            <p>Classes, deadlines and the moments in between — all in one place.</p>
         </section>
 
-        <section>
-            <p>This is the main body part of the website</p>
+        <section class="calendar-card" aria-label="Student calendar">
+            <div class="calendar-header">
+                <div>
+                    <span class="eyebrow">Your schedule</span>
+                    <h2 id="calendar-period" aria-live="polite"></h2>
+                </div>
+                <div class="calendar-header__controls">
+                    <button class="calendar-button calendar-button--today" id="calendar-today" type="button">Today</button>
+                    <div class="calendar-navigation" role="group" aria-label="Calendar navigation">
+                        <button class="calendar-button calendar-button--icon" id="calendar-previous" type="button" aria-label="Previous period">&larr;</button>
+                        <button class="calendar-button calendar-button--icon" id="calendar-next" type="button" aria-label="Next period">&rarr;</button>
+                    </div>
+                    <div class="calendar-view-switch" role="group" aria-label="Calendar view">
+                        <button class="calendar-view-button" type="button" data-view="month" aria-pressed="true">Month</button>
+                        <button class="calendar-view-button" type="button" data-view="week" aria-pressed="false">Week</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-filters" role="group" aria-label="Filter events by type">
+                <span class="calendar-filters__label">Show</span>
+                <button class="calendar-filter calendar-filter--lecture" type="button" data-category="lecture" aria-pressed="true">
+                    <span class="calendar-filter__dot" aria-hidden="true"></span>Lectures
+                </button>
+                <button class="calendar-filter calendar-filter--seminar" type="button" data-category="seminar" aria-pressed="true">
+                    <span class="calendar-filter__dot" aria-hidden="true"></span>Seminars
+                </button>
+                <button class="calendar-filter calendar-filter--assignment" type="button" data-category="assignment" aria-pressed="true">
+                    <span class="calendar-filter__dot" aria-hidden="true"></span>Assignments
+                </button>
+                <button class="calendar-filter calendar-filter--society" type="button" data-category="society" aria-pressed="true">
+                    <span class="calendar-filter__dot" aria-hidden="true"></span>Societies
+                </button>
+            </div>
+
+            <div class="calendar-layout">
+                <div class="calendar-board" aria-label="Calendar dates">
+                    <div class="calendar-weekdays" aria-hidden="true">
+                        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span>
+                        <span>Fri</span><span>Sat</span><span>Sun</span>
+                    </div>
+                    <div class="calendar-grid" id="calendar-grid"></div>
+                </div>
+
+                <aside class="calendar-agenda" aria-labelledby="agenda-title">
+                    <div class="calendar-agenda__header">
+                        <div>
+                            <span class="eyebrow">Day at a glance</span>
+                            <h3 id="agenda-title" aria-live="polite"></h3>
+                        </div>
+                        <span class="calendar-agenda__count" id="agenda-count"></span>
+                    </div>
+                    <div class="calendar-agenda__events" id="agenda-events"></div>
+                </aside>
+            </div>
+            <p class="calendar-status" id="calendar-status" role="status" aria-live="polite"></p>
         </section>
     </main>
 
+    <script src="assets/js/my-calendar.js" defer></script>
 {{template "footer" . }}
