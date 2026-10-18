@@ -24,3 +24,9 @@ Details relating to different societies they have signed up to through the unive
 
 ## Navigation (nav.gohtml)
 Template for the navigation bar to the different webpages on the website
+
+## Login (login.gohtml)
+Page for students to log into their accounts on The Hub
+
+## Signup (signup.gohtml)
+Page for students to register onto The Hub
