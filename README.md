@@ -3,19 +3,18 @@ by Irede and Chizara
 
 ## Overall Project Idea
 
-After brainstorming, we came up with The Hub, a web application for students that collates information from different sources together whether that be course information, assignment deadlines or society events into one platform to support students getting a comprehensive and simplified view of their university life and committments.
+After brainstorming, we came up with The Hub, a web application for students that collates information from different sources together whether that be course information, assignment deadlines or society events into one platform to support students getting a comprehensive and simplified view of their university life and commitments.
 
-From our first year, we typically found that we would have to search different platforms and webpages for different pieces of information. For example, EIE at Imperial uses Teams, Canvas, Panopto and Edstem to upload lecture recordings, submit courseworks/project and discuss with coursemates. Ontop of that, society information was kept largely separate, with Instagram being the most reliable source to get any updates about events going on. This was not only very overwhelming but also felt that we would essentially play an endless game of catch up. This is why we wanted to create an application that students could easily access and navigate through...
+From our first year, we typically found that we would have to search different platforms and webpages for different pieces of information. For example, EIE at Imperial uses Teams, Canvas, Panopto and Edstem to upload lecture recordings, submit courseworks/project work and discuss with coursemates. On top of that, society information was kept largely separate, with Instagram being the most reliable source to get any updates about events going on. This was not only very overwhelming, but it also felt that we would essentially play an endless game of catch up with something always being missed until the last minute. This is why we wanted to create an application that enables students to easily access and navigate through to identify any clashes in committments and the essentials they need to do well in their course.
+
 
 ## Current Status
 
-Blah
-Blah
-
+We have created our Minimal Viable Product where two fake users are able to login and see all their information about the modules that they do within their course, the societies that they are a part of and how that is all connected together within the calendar page. This proof of concept demostrates the convenience of having one location to source information from.
 
 ## Future Development
 
-If this project was to be scaled up, we would work to integrate various university systems in the platform, but of course due to the timescale of the hackathon, we decided to focus on sample data to generate a proof of concept...
+Our next steps involve working to integrate various university systems (specifically systems used by our partner universities) into the platform.
 
 ## References (Harvard)
 
