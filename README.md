@@ -37,6 +37,8 @@ If this project was to be scaled up, we would work to integrate various universi
 
 "Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. We want to create a styling sheet for this website - one that is modern, intuitive for the student to navigate through and utilises colours well e.g. have orange to indicate a lecture within the students timetable and purple for the seminar. Asides that, the main colours of the overall website should be white, black, royal blue and two other colours that you think are suitable and cohesive for the vibe. Please create this stylesheet."
 
+"Course hero to be purple and learning hero to be orange"
+
 #### Calendar
 
 "Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. We want to create a calendar for this website - one that is modern, intuitive for the student to navigate through and utilises colours well e.g. have orange to indicate a lecture within the students timetable and purple for the seminar. Please create this calendar"
