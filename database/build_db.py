@@ -1,4 +1,3 @@
-import sqlite3 as sq3
 import database as db
 
 db.init_db()

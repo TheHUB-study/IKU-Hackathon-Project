@@ -89,7 +89,7 @@ def courses_insert(name, uni):
     conn, cursor = connect_db()
 
     cursor.execute(
-        f"SELECT uni_id FROM unis WHERE name = ?",
+        "SELECT uni_id FROM unis WHERE name = ?",
         (uni,)
     )
 
@@ -111,7 +111,7 @@ def users_insert(name, email, password, uni, course):
     conn, cursor = connect_db()
 
     cursor.execute(
-        f"SELECT uni_id FROM unis WHERE name = ?",
+        "SELECT uni_id FROM unis WHERE name = ?",
         (uni,)
     )
 
@@ -123,7 +123,7 @@ def users_insert(name, email, password, uni, course):
         uni_id = None
 
     cursor.execute(
-        f"SELECT course_id FROM courses WHERE name = ?",
+        "SELECT course_id FROM courses WHERE name = ?",
         (course,)
     )
 
@@ -151,7 +151,7 @@ def associations_insert(
     conn, cursor = connect_db()
 
     cursor.execute(
-        f"SELECT course_id FROM courses WHERE name = ?",
+        "SELECT course_id FROM courses WHERE name = ?",
         (course,)
     )
 
