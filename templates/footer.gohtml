@@ -11,7 +11,37 @@
             <br>
             <p>Product of the IKU Womxn in STEM Hackathon 2026</p>
         </footer>
-        <script></script>
+        <section class="hubbie" data-hubbie aria-label="Hubbie student guide">
+            <section class="hubbie__panel" id="hubbie-panel" aria-labelledby="hubbie-title" hidden>
+                <header class="hubbie__header">
+                    <span class="hubbie__avatar" aria-hidden="true">H</span>
+                    <div>
+                        <h2 id="hubbie-title">Hubbie</h2>
+                        <p>Your friendly Hub guide</p>
+                    </div>
+                    <button class="hubbie__close" type="button" data-hubbie-close aria-label="Close Hubbie">&times;</button>
+                </header>
+                <div class="hubbie__conversation" data-hubbie-conversation aria-live="polite" aria-relevant="additions text">
+                    <p class="hubbie__message hubbie__message--assistant">Hi! I can help you find your way around The Hub or look for information on this page. What would you like to know?</p>
+                </div>
+                <div class="hubbie__suggestions" aria-label="Suggested questions">
+                    <button type="button" data-hubbie-question="Where can I find my assignments?">Find assignments</button>
+                    <button type="button" data-hubbie-question="What can I find on this page?">Explore this page</button>
+                    <button type="button" data-hubbie-question="Where can I see society events?">Find society events</button>
+                </div>
+                <form class="hubbie__form" data-hubbie-form>
+                    <label class="visually-hidden" for="hubbie-question">Ask Hubbie a question</label>
+                    <input id="hubbie-question" name="question" type="text" placeholder="Ask me anything..." autocomplete="off" required>
+                    <button type="submit" aria-label="Send message">Send</button>
+                </form>
+                <p class="hubbie__note">Demo guide · answers use information shown on The Hub</p>
+            </section>
+            <button class="hubbie__toggle" type="button" data-hubbie-toggle aria-expanded="false" aria-controls="hubbie-panel">
+                <span class="hubbie__toggle-icon" aria-hidden="true">✦</span>
+                <span>Ask Hubbie</span>
+            </button>
+        </section>
+        <script src="assets/js/hubbie.js" defer></script>
     </body>
 </html>
 {{end}}
