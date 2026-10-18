@@ -26,10 +26,28 @@ associations = {
         "ICGC": ["society", "Imperial College Gospel Choir", "@icgospel", None],
         }
 
-courses = {"EIE-2": ["IAC", "DECA"], "Computing-1": ["DM", "LA"]}
+users = {
+    "Zara": ["cpa25@ic.ac.uk", "1234", "Imperial", "EIE-02"],
+    "Irede": ["imo26@ic.ac.uk", "4321", "Imperial", "Computing-01"]
+    }
+
+courses = {"EIE-02": "Imperial", "Computing-01": "Imperial"}
+
+unis = ["Imperial", "UCL", "KCL"]
+
+for uni in unis:
+    db.unis_insert(uni)
 
 for course in courses:
-    db.courses_insert(course)
+    uni = courses[course]
+    db.courses_insert(course, uni)
+
+for user in users:
+    email = users[user][0]
+    password = users[user][1]
+    uni = users[user][2]
+    course = users[user][3]
+    db.users_insert(user, email, password, uni, course)
 
 for association in associations:
     assoc_type = associations[association][0]
