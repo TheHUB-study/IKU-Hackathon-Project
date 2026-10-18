@@ -53,6 +53,10 @@ If this project was to be scaled up, we would work to integrate various universi
 
 "Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. For the course page, we need to add a course overview (this will be determined by the login info but right now you can add placeholders) that has the name of the course at the top and then dropdowns underneath of all their modules along with information about their weightings and assessment criteria - one that is modern, intuitive for the student to navigate through and utilises colours well. Please create this section on the course page"
 
+#### Societies Page
+
+"Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. For the course page, we need to add a societies overview (for now you can add placeholders) that has dropdowns underneath of all the societies the student is a part of with information and at the bottom a feed displaying different instagram posts that will be passed through by an url in a carousel - one that is modern, intuitive for the student to navigate through and utilises colours well. Please create this section on the societies page"
+
 ### Online Sources
 
 https://www.geeksforgeeks.org/html/html-cheat-sheet/
