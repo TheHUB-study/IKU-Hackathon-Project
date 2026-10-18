@@ -66,6 +66,8 @@ Our next steps involve working to integrate various university systems (specific
 
 "Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. For our website we want to create an AI agent called - Hubbie - that in the bottom right corner of the website. We need to integrate APIs later but the point of Hubbie is to be able fetch info from different pages on the website for the user and provide the user general guidance on how to navigate the website. Hubbie lives in a little pop up window on every page - one that is modern, intuitive for the student to navigate through and utilises colours well. Please create Hubbie on the website"
 
+"Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. For our website we want to create an AI agent called - Hubbie - that in the bottom right corner of the website. We want to use the Gemini API to power our chatbot rather than delivering pre-determined responses"
+
 ### Online Sources
 
 https://www.geeksforgeeks.org/html/html-cheat-sheet/
