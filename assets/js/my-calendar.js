@@ -13,6 +13,7 @@
     let selectedDate = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12);
     let displayDate = new Date(today.getFullYear(), today.getMonth(), 1, 12);
     let view = "month";
+    let calendarEvents = [];
     const activeCategories = new Set(["lecture", "seminar", "assignment", "society"]);
     const categoryLabels = {
         lecture: "Lecture",
@@ -20,28 +21,6 @@
         assignment: "Assignment",
         society: "Society"
     };
-    const weeklySchedule = {
-        1: [
-            { start: "09:00", end: "10:30", title: "Data Structures", category: "lecture", location: "Lecture Theatre 2" },
-            { start: "13:00", end: "14:00", title: "Engineering Design", category: "seminar", location: "Room 3.12" }
-        ],
-        2: [
-            { start: "11:00", end: "12:00", title: "Signals & Systems", category: "lecture", location: "Blackett 1004" },
-            { start: "14:00", end: "15:00", title: "Software Engineering", category: "seminar", location: "Room 2.08" }
-        ],
-        3: [
-            { start: "10:00", end: "11:30", title: "Machine Learning", category: "lecture", location: "Lecture Theatre 1" },
-            { start: "14:00", end: "15:00", title: "Data Structures", category: "seminar", location: "Room 3.12" }
-        ],
-        4: [
-            { start: "09:00", end: "10:30", title: "Software Engineering", category: "lecture", location: "Lecture Theatre 2" },
-            { start: "13:00", end: "14:00", title: "Signals & Systems", category: "seminar", location: "Room 2.08" }
-        ],
-        5: [
-            { start: "11:00", end: "12:00", title: "Engineering Design", category: "seminar", location: "Room 3.12" }
-        ]
-    };
-
     function dateKey(date) {
         const year = date.getFullYear();
         const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -54,50 +33,9 @@
     }
 
     function eventsForDate(date) {
-        const events = (weeklySchedule[date.getDay()] || []).map(event => ({ ...event }));
-        const day = date.getDate();
-
-        if (day === 15) {
-            events.push({
-                start: "23:59",
-                end: "",
-                title: "Data Structures problem set due",
-                category: "assignment",
-                location: "Submit on My Learning"
-            });
-        }
-
-        if (day === 28) {
-            events.push({
-                start: "16:00",
-                end: "",
-                title: "Software Engineering reflection due",
-                category: "assignment",
-                location: "Submit on My Learning"
-            });
-        }
-
-        if (date.getDay() === 4 && Math.ceil(day / 7) === 2) {
-            events.push({
-                start: "17:30",
-                end: "19:00",
-                title: "Women in STEM community evening",
-                category: "society",
-                location: "Student Union, Room 4"
-            });
-        }
-
-        if (date.getDay() === 6 && Math.ceil(day / 7) === 3) {
-            events.push({
-                start: "11:00",
-                end: "13:00",
-                title: "Robotics Society build session",
-                category: "society",
-                location: "Innovation Lab"
-            });
-        }
-
-        return events.sort((first, second) => first.start.localeCompare(second.start));
+        return calendarEvents
+            .filter(event => dateKey(event.date) === dateKey(date))
+            .sort((first, second) => first.start.localeCompare(second.start));
     }
 
     function visibleEventsForDate(date) {
@@ -203,13 +141,21 @@
         const details = document.createElement("div");
         details.className = "calendar-event__details";
 
-        const title = document.createElement("strong");
+        const safeUrl = typeof event.url === "string" && event.url.startsWith("https://")
+            ? event.url
+            : "";
+        const title = document.createElement(safeUrl ? "a" : "strong");
         title.className = "calendar-event__title";
         title.textContent = event.title;
+        if (safeUrl) {
+            title.href = safeUrl;
+            title.target = "_blank";
+            title.rel = "noopener noreferrer";
+        }
 
         const meta = document.createElement("span");
         meta.className = "calendar-event__meta";
-        meta.textContent = `${categoryLabels[event.category]} \u00b7 ${event.location}`;
+        meta.textContent = `${categoryLabels[event.category]} \u00b7 ${event.location || "Location not set"}`;
 
         details.append(title, meta);
         card.append(time, details);
@@ -314,4 +260,45 @@
     });
 
     render();
+
+    if (window.hubDashboardPromise) {
+        window.hubDashboardPromise.then(dashboard => {
+            if (!dashboard) {
+                return;
+            }
+            calendarEvents = dashboard.events.flatMap(event => {
+                const category = event.event_type;
+                if (!categoryLabels[category]) {
+                    return [];
+                }
+                const isDeadline = category === "assignment";
+                const timestamp = isDeadline
+                    ? event.end_time || event.start_time
+                    : event.start_time || event.end_time;
+                const date = timestamp ? new Date(timestamp) : null;
+                if (!date || Number.isNaN(date.getTime())) {
+                    return [];
+                }
+                const endDate = event.end_time ? new Date(event.end_time) : null;
+                return [{
+                    date,
+                    start: isDeadline && !event.start_time
+                        ? "23:59"
+                        : formatDate(date, { hour: "2-digit", minute: "2-digit", hour12: false }),
+                    end: !isDeadline && endDate && !Number.isNaN(endDate.getTime())
+                        ? formatDate(endDate, { hour: "2-digit", minute: "2-digit", hour12: false })
+                        : "",
+                    title: event.name,
+                    category,
+                    location: event.location || event.association,
+                    url: event.url
+                }];
+            });
+            status.textContent = "Calendar updated from your account.";
+            render();
+        }).catch(error => {
+            console.error("Could not load calendar data:", error);
+            status.textContent = "Could not load your calendar data. Check that the local API is running, then refresh.";
+        });
+    }
 })();

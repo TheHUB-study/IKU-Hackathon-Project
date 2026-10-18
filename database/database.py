@@ -1,9 +1,38 @@
+import hashlib
+import hmac
+import os
+import secrets
 import sqlite3 as sq3
+from pathlib import Path
 
-DB_NAME = "uni_catalogue.db"
+DB_NAME = os.environ.get(
+    "HUB_DB_PATH",
+    str(Path(__file__).with_name("uni_catalogue.db")),
+)
+
+
+def hash_password(password):
+    salt = secrets.token_bytes(16)
+    digest = hashlib.pbkdf2_hmac("sha256", password.encode("utf-8"), salt, 200_000)
+    return f"pbkdf2_sha256${salt.hex()}${digest.hex()}"
+
+
+def verify_password(password, stored_password):
+    try:
+        algorithm, salt_hex, digest_hex = stored_password.split("$")
+        if algorithm != "pbkdf2_sha256":
+            return False
+        salt = bytes.fromhex(salt_hex)
+        expected = bytes.fromhex(digest_hex)
+    except (ValueError, TypeError):
+        return False
+
+    actual = hashlib.pbkdf2_hmac("sha256", password.encode("utf-8"), salt, 200_000)
+    return hmac.compare_digest(actual, expected)
 
 def connect_db():
     conn = sq3.connect(DB_NAME)
+    conn.execute("PRAGMA foreign_keys = ON")
     cursor = conn.cursor()
 
     return [conn, cursor]
@@ -40,7 +69,7 @@ def init_db():
             password TEXT,
             uni_id INTEGER,
             course_id INTEGER,
-            FOREIGN KEY (uni_id) REFERENCES unis(uni_id)
+            FOREIGN KEY (uni_id) REFERENCES unis(uni_id),
             FOREIGN KEY (course_id) REFERENCES courses(course_id)
         )
     """)
@@ -136,7 +165,7 @@ def users_insert(name, email, password, uni, course):
 
     cursor.execute(
         "INSERT INTO users (name, email, password, uni_id, course_id) VALUES (?, ?, ?, ?, ?)",
-        (name, email, password, uni_id, course_id)
+        (name, email, hash_password(password), uni_id, course_id)
     )
 
     save_db(conn)

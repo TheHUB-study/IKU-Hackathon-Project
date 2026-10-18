@@ -12,6 +12,12 @@ From our first year, we typically found that we would have to search different p
 
 We have created our Minimal Viable Product where two fake users are able to login and see all their information about the modules that they do within their course, the societies that they are a part of and how that is all connected together within the calendar page. This proof of concept demostrates the convenience of having one location to source information from.
 
+### Run the local database-backed demo
+
+Seed the SQLite database once with `python3 database/build_db.py`, start the API with `python3 database/server.py`, and run `go run main.go` in a second terminal. Open `http://localhost:8080` and use one of the sample accounts listed in `database/build_db.py`.
+
+The API binds to `127.0.0.1:8001` and is intended for a local demo only. Society events are shared sample data because the database does not yet store which societies each user follows.
+
 ## Future Development
 
 Our next steps involve working to integrate various university systems (specifically systems used by our partner universities) into the platform.
