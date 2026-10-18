@@ -3,13 +3,191 @@
     {{template "nav" . }}
 
     <main>
-        <section>
-            <h1>My Course</h1>
-            <p>Page containing all the information about modules, weightings and blah...</p>
+        <section class="course-hero">
+            <span class="course-hero__eyebrow">Your course overview</span>
+            <h1>EIE-01</h1>
+            <p>Modules, weightings and all things assessment-related</p>
         </section>
 
-        <section>
-            <p>This is the main body part of the website</p>
+        <section class="course-content" aria-labelledby="course-modules-heading">
+            <div class="course-overview" aria-label="Course summary">
+                <div class="course-overview__item">
+                    <span class="course-overview__value">Year 1</span>
+                    <span class="course-overview__label">Study year</span>
+                </div>
+                <div class="course-overview__item">
+                    <span class="course-overview__value">5</span>
+                    <span class="course-overview__label">Number of modules</span>
+                </div>
+                <div class="course-overview__item">
+                    <span class="course-overview__value">120</span>
+                    <span class="course-overview__label">Credits</span>
+                </div>
+                <div class="course-overview__item">
+                    <span class="course-overview__value">7.50%</span>
+                    <span class="course-overview__label">Degree weighting</span>
+                </div>
+            </div>
+
+            <div class="course-modules__heading">
+                <div>
+                    <span class="eyebrow">Your study plan</span>
+                    <h2 id="course-modules-heading">Modules &amp; assessment</h2>
+                </div>
+                <p>Click on the pluses below to get a breakdown of each module.</p>
+            </div>
+
+            <div class="course-modules">
+                <details class="module-card" open>
+                    <summary class="module-card__summary">
+                        <span class="module-card__number" aria-hidden="true">01</span>
+                        <span class="module-card__title">
+                            <strong>Engineering Mathematics</strong>
+                            <span>Core module - 15 credits</span>
+                        </span>
+                        <span class="module-card__weight">
+                            <strong>12.5%</strong>
+                            <span>of this year</span>
+                        </span>
+                    </summary>
+                    <div class="module-card__details">
+                        <p class="module-card__description">Build the mathematical foundations used across engineering, from calculus to linear algebra.</p>
+                        <h3>Assessment criteria</h3>
+                        <div class="assessment-list">
+                            <div class="assessment-item assessment-item--blue">
+                                <span class="assessment-item__type">Coursework</span>
+                                <strong>40%</strong>
+                                <span>Problem sheets and applied exercises</span>
+                            </div>
+                            <div class="assessment-item assessment-item--coral">
+                                <span class="assessment-item__type">Exam</span>
+                                <strong>60%</strong>
+                                <span>End-of-year written examination</span>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="module-card">
+                    <summary class="module-card__summary">
+                        <span class="module-card__number" aria-hidden="true">02</span>
+                        <span class="module-card__title">
+                            <strong>Circuits and Systems</strong>
+                            <span>Core module - 15 credits</span>
+                        </span>
+                        <span class="module-card__weight">
+                            <strong>12.5%</strong>
+                            <span>of this year</span>
+                        </span>
+                    </summary>
+                    <div class="module-card__details">
+                        <p class="module-card__description">Explore circuit analysis, electrical networks and the behaviour of continuous-time systems.</p>
+                        <h3>Assessment criteria</h3>
+                        <div class="assessment-list">
+                            <div class="assessment-item assessment-item--teal">
+                                <span class="assessment-item__type">Lab portfolio</span>
+                                <strong>30%</strong>
+                                <span>Practical work and lab reports</span>
+                            </div>
+                            <div class="assessment-item assessment-item--coral">
+                                <span class="assessment-item__type">Exam</span>
+                                <strong>70%</strong>
+                                <span>End-of-year written examination</span>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="module-card">
+                    <summary class="module-card__summary">
+                        <span class="module-card__number" aria-hidden="true">03</span>
+                        <span class="module-card__title">
+                            <strong>Digital Electronics</strong>
+                            <span>Core module - 15 credits</span>
+                        </span>
+                        <span class="module-card__weight">
+                            <strong>12.5%</strong>
+                            <span>of this year</span>
+                        </span>
+                    </summary>
+                    <div class="module-card__details">
+                        <p class="module-card__description">Learn how digital logic, processor architecture and embedded systems power modern devices.</p>
+                        <h3>Assessment criteria</h3>
+                        <div class="assessment-list">
+                            <div class="assessment-item assessment-item--purple">
+                                <span class="assessment-item__type">Design project</span>
+                                <strong>40%</strong>
+                                <span>Build and document a digital system</span>
+                            </div>
+                            <div class="assessment-item assessment-item--coral">
+                                <span class="assessment-item__type">Exam</span>
+                                <strong>60%</strong>
+                                <span>End-of-year written examination</span>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="module-card">
+                    <summary class="module-card__summary">
+                        <span class="module-card__number" aria-hidden="true">04</span>
+                        <span class="module-card__title">
+                            <strong>Programming for Engineers</strong>
+                            <span>Core module - 15 credits</span>
+                        </span>
+                        <span class="module-card__weight">
+                            <strong>12.5%</strong>
+                            <span>of this year</span>
+                        </span>
+                    </summary>
+                    <div class="module-card__details">
+                        <p class="module-card__description">Develop practical programming skills and apply computational thinking to engineering problems.</p>
+                        <h3>Assessment criteria</h3>
+                        <div class="assessment-list">
+                            <div class="assessment-item assessment-item--blue">
+                                <span class="assessment-item__type">Programming assignments</span>
+                                <strong>50%</strong>
+                                <span>Individual coding tasks</span>
+                            </div>
+                            <div class="assessment-item assessment-item--purple">
+                                <span class="assessment-item__type">Practical test</span>
+                                <strong>50%</strong>
+                                <span>Timed programming assessment</span>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="module-card">
+                    <summary class="module-card__summary">
+                        <span class="module-card__number" aria-hidden="true">05</span>
+                        <span class="module-card__title">
+                            <strong>Engineering Design Project</strong>
+                            <span>Core module - 60 credits</span>
+                        </span>
+                        <span class="module-card__weight">
+                            <strong>50%</strong>
+                            <span>of this year</span>
+                        </span>
+                    </summary>
+                    <div class="module-card__details">
+                        <p class="module-card__description">Work collaboratively to design, prototype and present a solution to an open-ended engineering brief.</p>
+                        <h3>Assessment criteria</h3>
+                        <div class="assessment-list">
+                            <div class="assessment-item assessment-item--teal">
+                                <span class="assessment-item__type">Project portfolio</span>
+                                <strong>60%</strong>
+                                <span>Design process and prototype</span>
+                            </div>
+                            <div class="assessment-item assessment-item--purple">
+                                <span class="assessment-item__type">Presentation</span>
+                                <strong>40%</strong>
+                                <span>Team demonstration and reflection</span>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
         </section>
     </main>
 
