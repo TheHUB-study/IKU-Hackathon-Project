@@ -27,6 +27,7 @@ def init_db():
         CREATE TABLE IF NOT EXISTS associations(
             assoc_id INTEGER NOT NULL PRIMARY KEY,
             name TEXT,
+            assoc_type TEXT,
             description TEXT,
             tag TEXT,
             course_id INTEGER,
@@ -64,6 +65,7 @@ def courses_insert(name):
 
 def associations_insert(
         name, 
+        assoc_type,
         description, 
         tag,
         course):
@@ -82,8 +84,8 @@ def associations_insert(
         course_id = None
 
     cursor.execute(
-        "INSERT INTO associations (name, description, tag, course_id) VALUES (?, ?, ?, ?)",
-        (name, description, tag, course_id)
+        "INSERT INTO associations (name, assoc_type, description, tag, course_id) VALUES (?, ?, ?, ?, ?)",
+        (name, assoc_type, description, tag, course_id)
     )
 
     save_db(conn)
