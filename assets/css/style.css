@@ -1138,6 +1138,12 @@ footer p {
     text-transform: uppercase;
 }
 
+main > section.course-hero {
+    background:
+        radial-gradient(ellipse at 86% 15%, rgb(255 255 255 / 20%), transparent 15rem),
+        linear-gradient(120deg, #5936a5 0%, var(--color-purple) 64%, #9579df 100%);
+}
+
 .course-hero h1 {
     max-width: 22ch;
 }
@@ -1395,6 +1401,12 @@ footer p {
     align-items: flex-end;
     justify-content: space-between;
     gap: 2rem;
+}
+
+main.learning-page > section.learning-hero {
+    background:
+        radial-gradient(ellipse at 86% 15%, rgb(255 255 255 / 20%), transparent 15rem),
+        linear-gradient(120deg, #b94b16 0%, var(--color-coral) 64%, #f29b54 100%);
 }
 
 .learning-hero > div:first-child {
