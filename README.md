@@ -45,6 +45,14 @@ If this project was to be scaled up, we would work to integrate various universi
 
 "Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. For the index page, we want to add in a carousel that highlights the functionality of different sections for this website - one that is modern, intuitive for the student to navigate through and utilises colours well. Please create this carousel"
 
+#### Login Page
+
+"Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. For the index page, need to add in a login and sign up pages that students can use to enter their name, their email address, a password, their university from a list of UK universities and their course from a list of courses - one that is modern, intuitive for the student to navigate through and utilises colours well. Please create this login and sign up pages"
+
+#### Course Page
+
+"Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. For the course page, we need to add a course overview (this will be determined by the login info but right now you can add placeholders) that has the name of the course at the top and then dropdowns underneath of all their modules along with information about their weightings and assessment criteria - one that is modern, intuitive for the student to navigate through and utilises colours well. Please create this section on the course page"
+
 ### Online Sources
 
 https://www.geeksforgeeks.org/html/html-cheat-sheet/

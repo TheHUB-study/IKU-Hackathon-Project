@@ -9,5 +9,9 @@
         <a href="my-societies.html" {{if eq $page "my-societies"}}aria-current="page"{{end}}>My Societies</a>
         <a href="my-calendar.html" {{if eq $page "my-calendar"}}aria-current="page"{{end}}>My Calendar</a>
     </div>
+    <div class="site-nav__account">
+        <a href="login.html" {{if eq $page "login"}}aria-current="page"{{end}}>Log in</a>
+        <a class="site-nav__signup" href="signup.html" {{if eq $page "signup"}}aria-current="page"{{end}}>Sign up</a>
+    </div>
 </nav>
 {{end}}
