@@ -14,15 +14,15 @@ events = {
         }
 
 associations = {
-        "IAC": ["Instruction Architecture and Compilers", "505", "EIE"], 
-        "DECA": ["Digital Electronics and Computer Architecture", "50%", "EIE"],
-        "DM": ["Discrete Maths", "75%", "Computing"],
-        "LA": ["Linear Algebra", "25%", "Computing"],
+        "IAC": ["Instruction Architecture and Compilers", "505", "EIE-02"], 
+        "DECA": ["Digital Electronics and Computer Architecture", "50%", "EIE-02"],
+        "DM": ["Discrete Maths", "75%", "Computing-01"],
+        "LA": ["Linear Algebra", "25%", "Computing-01"],
         "ACS": ["Afro Carribean Society", "@imperial_acs", None],
         "ICGC": ["Imperial College Gospel Choir", "@icgospel", None],
         }
 
-courses = {"EIE": ["IAC", "DECA"], "Computing": ["DM", "LA"]}
+courses = {"EIE-2": ["IAC", "DECA"], "Computing-1": ["DM", "LA"]}
 
 for course in courses:
     db.courses_insert(course)
