@@ -41,6 +41,10 @@ If this project was to be scaled up, we would work to integrate various universi
 
 "Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. We want to create a calendar for this website - one that is modern, intuitive for the student to navigate through and utilises colours well e.g. have orange to indicate a lecture within the students timetable and purple for the seminar. Please create this calendar"
 
+#### Index Page Carousel
+
+"Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. For the index page, we want to add in a carousel that highlights the functionality of different sections for this website - one that is modern, intuitive for the student to navigate through and utilises colours well. Please create this carousel"
+
 ### Online Sources
 
 https://www.geeksforgeeks.org/html/html-cheat-sheet/
