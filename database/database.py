@@ -79,7 +79,7 @@ def associations_insert(
     if row is not None:
         course_id = row[0]
     else:
-        course_id = "NULL"
+        course_id = None
 
     cursor.execute(
         "INSERT INTO associations (name, description, tag, course_id) VALUES (?, ?, ?, ?)",
@@ -110,7 +110,7 @@ def events_insert(
     if row is not None:
         assoc_id = row[0]
     else:
-        assoc_id = "NULL"
+        assoc_id = None
 
     cursor.execute(
         "INSERT INTO events (name, info, event_type, start_time, end_time, location, URL, assoc_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
