@@ -4,13 +4,118 @@
 
     <main>
         <section>
-            <h1>Hello, this is our web application</h1>
-            <p>Read the description</p>
+            <h1>The Hub Welcomes You</h1>
+            <p>See all your modules, societies and committments through the blue mirror...</p>
+            <div class="home-auth-links">
+                <a class="button button--light" href="signup.html">Create your account</a>
+                <a class="button button--outline-light" href="login.html">Log in</a>
+            </div>
         </section>
 
         <section>
-            <p>This is the main body part of the website</p>
+            <p>After brainstorming through different ideas, we came up with The Hub, a web application for students that collates information from different sources together whether that be course details, assignment deadlines or society events into one platform to support students getting a comprehensive and simplified view of their university life and committments.</p>
+            <p>From our first year, we typically found that we would have to search different platforms and webpages for different pieces of information. For example, EIE at Imperial uses Teams, Canvas, Panopto and Edstem to upload lecture recordings, submit courseworks/project work and discuss with coursemates. On top of that, society information was kept largely separate, with Instagram being the most reliable source to get any updates about events going on. This was not only very overwhelming, but it also felt that we would essentially play an endless game of catch up with something always being missed until the last minute. This is why we wanted to create an application that enables students to easily access and navigate through to identify any clashes in committments and the essentials they need to do well in their course.</p>
+            <p>Everyone deserves a chance to see their life clearly through The Hub.</p>
+        </section>
+
+        <section class="home-showcase" aria-labelledby="home-showcase-title">
+            <div class="home-showcase__heading">
+                <div>
+                    <span class="eyebrow">One hub, less hassle</span>
+                    <h2 id="home-showcase-title">Your student life, all in one place</h2>
+                    <p>Explore the tools that bring your course, societies and schedule together.</p>
+                </div>
+                <div class="feature-carousel__controls" role="group" aria-label="Carousel controls">
+                    <button class="feature-carousel__arrow" type="button" data-carousel-previous aria-label="Previous feature">&larr;</button>
+                    <button class="feature-carousel__arrow" type="button" data-carousel-next aria-label="Next feature">&rarr;</button>
+                </div>
+            </div>
+
+            <div class="feature-carousel" data-carousel role="region" aria-roledescription="carousel" aria-label="Explore The Hub" tabindex="0">
+                <div class="feature-carousel__track">
+                    <article class="feature-slide feature-slide--course" role="group" aria-roledescription="slide" aria-label="1 of 4">
+                        <div class="feature-slide__content">
+                            <span class="feature-slide__eyebrow">01 / My Course</span>
+                            <h3>Know what your course is all about.</h3>
+                            <p>Module and course essentials kept together in one page, so the important details are always close at hand.</p>
+                            <a class="feature-slide__link" href="my-course.html">Explore My Course <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                        <div class="feature-slide__visual" aria-hidden="true">
+                            <div class="preview-window preview-window--course">
+                                <div class="preview-window__top"><span></span><span></span><span></span><b>My Modules</b></div>
+                                <div class="preview-module"><span class="preview-module__icon">A</span><span><strong>Discrete Maths</strong><small>Module overview</small></span><b>&rsaquo;</b></div>
+                                <div class="preview-module"><span class="preview-module__icon">B</span><span><strong>Linear Algebra</strong><small>Module overview</small></span><b>&rsaquo;</b></div>
+                                <div class="preview-module"><span class="preview-module__icon">C</span><span><strong>DECA</strong><small>Module overview</small></span><b>&rsaquo;</b></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="feature-slide feature-slide--learning" role="group" aria-roledescription="slide" aria-label="2 of 4" aria-hidden="true" inert>
+                        <div class="feature-slide__content">
+                            <span class="feature-slide__eyebrow">02 / My Learning</span>
+                            <h3>Stay one step ahead of deadlines.</h3>
+                            <p>See all your lectures, assignments and everything in between.</p>
+                            <a class="feature-slide__link" href="my-learning.html">Explore My Learning <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                        <div class="feature-slide__visual" aria-hidden="true">
+                            <div class="preview-window preview-window--learning">
+                                <div class="preview-window__top"><span></span><span></span><span></span><b>Coming up</b></div>
+                                <div class="preview-task"><i></i><span><strong>Lab Coursework</strong><small>Today · 11:00</small></span><b>In class</b></div>
+                                <div class="preview-task"><i></i><span><strong>Problem Sheet 01</strong><small>Thurs 22 Oct . 19:00</small></span><b>4 days</b></div>
+                                <div class="preview-task"><i></i><span><strong>CPU Extension</strong><small>Thurs 29 Oct . 17:00</small></span><b>11 days</b></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="feature-slide feature-slide--societies" role="group" aria-roledescription="slide" aria-label="3 of 4" aria-hidden="true" inert>
+                        <div class="feature-slide__content">
+                            <span class="feature-slide__eyebrow">03 / My Societies</span>
+                            <h3>Make room for the things you love.</h3>
+                            <p>Get all your society updates in one view.</p>
+                            <a class="feature-slide__link" href="my-societies.html">Explore My Societies <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                        <div class="feature-slide__visual" aria-hidden="true">
+                            <div class="preview-window preview-window--societies">
+                                <div class="preview-window__top"><span></span><span></span><span></span><b>Society moments</b></div>
+                                <div class="preview-event"><div class="preview-event__date"><b>18</b><small>OCT</small></div><span><strong>Welcome Mixer</strong><small>African Caribbean Society · 18:30</small></span><b>&nearr;</b></div>
+                                <div class="preview-event"><div class="preview-event__date"><b>21</b><small>OCT</small></div><span><strong>Choir Practice</strong><small>Gospel Choir Society · 18:00</small></span><b>&nearr;</b></div>
+                                <div class="preview-tags"><span>Meet people</span><span>Try something new</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="feature-slide feature-slide--calendar" role="group" aria-roledescription="slide" aria-label="4 of 4" aria-hidden="true" inert>
+                        <div class="feature-slide__content">
+                            <span class="feature-slide__eyebrow">04 / My Calendar</span>
+                            <h3>See your whole week at a glance.</h3>
+                            <p>Lectures, assignments and society events in one clear, colour-coded schedule.</p>
+                            <a class="feature-slide__link" href="my-calendar.html">Explore My Calendar <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                        <div class="feature-slide__visual" aria-hidden="true">
+                            <div class="preview-window preview-window--calendar">
+                                <div class="preview-window__top"><span></span><span></span><span></span><b>Your week</b></div>
+                                <div class="preview-calendar__days"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span></div>
+                                <div class="preview-calendar__row"><b>09:00</b><i class="preview-calendar__lecture">Lecture</i><span></span><i class="preview-calendar__seminar">Seminar</i><span></span></div>
+                                <div class="preview-calendar__row"><b>11:00</b><span></span><i class="preview-calendar__lecture">Lecture</i><span></span><span></span><i class="preview-calendar__society">Society</i></div>
+                                <div class="preview-calendar__row"><b>14:00</b><i class="preview-calendar__seminar">Seminar</i><span></span><i class="preview-calendar__lecture">Lecture</i><span></span></div>
+                                <div class="preview-calendar__legend"><span><i class="preview-calendar__lecture"></i>Lectures</span><span><i class="preview-calendar__seminar"></i>Seminars</span><span><i class="preview-calendar__society"></i>Societies</span></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="feature-carousel__footer">
+                    <div class="feature-carousel__indicators" role="group" aria-label="Choose a feature">
+                        <button class="feature-carousel__indicator" type="button" data-carousel-slide="0" aria-label="Show My Course" aria-pressed="true"></button>
+                        <button class="feature-carousel__indicator" type="button" data-carousel-slide="1" aria-label="Show My Learning" aria-pressed="false"></button>
+                        <button class="feature-carousel__indicator" type="button" data-carousel-slide="2" aria-label="Show My Societies" aria-pressed="false"></button>
+                        <button class="feature-carousel__indicator" type="button" data-carousel-slide="3" aria-label="Show My Calendar" aria-pressed="false"></button>
+                    </div>
+                    <span class="feature-carousel__status" data-carousel-status aria-live="polite">1 / 4</span>
+                </div>
+            </div>
         </section>
     </main>
 
+    <script src="assets/js/index-carousel.js" defer></script>
 {{template "footer" . }}

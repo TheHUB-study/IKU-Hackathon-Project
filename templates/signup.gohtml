@@ -1,0 +1,72 @@
+{{template "header" .Title}}
+<body>
+    {{template "nav" . }}
+
+    <main class="auth-page">
+        <section class="auth-card auth-card--signup" aria-labelledby="auth-title">
+            <div class="auth-card__aside">
+                <a class="auth-card__brand" href="index.html">The Hub</a>
+                <div>
+                    <span class="auth-card__eyebrow">A clearer view of uni</span>
+                    <h2>Your course, commitments and communities — all connected.</h2>
+                </div>
+                <p>Set up your student profile to make The Hub yours.</p>
+            </div>
+
+            <div class="auth-card__content">
+                <span class="eyebrow">Get started</span>
+                <h1 id="auth-title">Create your account</h1>
+                <p class="auth-card__description">A few details to get your student hub set up.</p>
+
+                <form class="auth-form auth-form--signup" method="post" data-auth-form>
+                    <label class="auth-field">
+                        <span>Your name</span>
+                        <input type="text" name="name" autocomplete="name" placeholder="e.g. Alex Morgan" required>
+                    </label>
+
+                    <label class="auth-field">
+                        <span>Email address</span>
+                        <input type="email" name="email" autocomplete="email" placeholder="you@university.ac.uk" required>
+                    </label>
+
+                    <label class="auth-field">
+                        <span>Password</span>
+                        <input type="password" name="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required>
+                    </label>
+
+                    <label class="auth-field">
+                        <span>University</span>
+                        <select name="university" required>
+                            <option value="" disabled selected>Select your university</option>
+                            <optgroup label="England">    
+                                <option>Imperial College London</option>
+                                <option>King's College London</option>
+                                <option>University College London</option>
+                            </optgroup>
+                            <option>Another UK university</option>
+                        </select>
+                    </label>
+
+                    <label class="auth-field">
+                        <span>Course</span>
+                        <select name="course" required>
+                            <option value="" disabled selected>Select your course</option>
+                            <optgroup label="Imperial Courses">
+                                <option>Computing-01</option>
+                                <option>EIE-02</option>
+                            </optgroup>
+                            <option>Another course</option>
+                        </select>
+                    </label>
+
+                    <button class="button button--primary auth-form__submit" type="submit">Create account</button>
+                    <p class="auth-form__message" data-auth-message role="status" aria-live="polite" hidden></p>
+                </form>
+
+                <p class="auth-card__switch">Already have an account? <a href="login.html">Log in</a></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/auth-forms.js" defer></script>
+{{template "footer" . }}

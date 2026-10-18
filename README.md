@@ -37,6 +37,32 @@ If this project was to be scaled up, we would work to integrate various universi
 
 "Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. We want to create a styling sheet for this website - one that is modern, intuitive for the student to navigate through and utilises colours well e.g. have orange to indicate a lecture within the students timetable and purple for the seminar. Asides that, the main colours of the overall website should be white, black, royal blue and two other colours that you think are suitable and cohesive for the vibe. Please create this stylesheet."
 
+"Course hero to be purple and learning hero to be orange"
+
+#### Calendar
+
+"Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. We want to create a calendar for this website - one that is modern, intuitive for the student to navigate through and utilises colours well e.g. have orange to indicate a lecture within the students timetable and purple for the seminar. Please create this calendar"
+
+#### Index Page Carousel
+
+"Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. For the index page, we want to add in a carousel that highlights the functionality of different sections for this website - one that is modern, intuitive for the student to navigate through and utilises colours well. Please create this carousel"
+
+#### Login Page
+
+"Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. For the index page, need to add in a login and sign up pages that students can use to enter their name, their email address, a password, their university from a list of UK universities and their course from a list of courses - one that is modern, intuitive for the student to navigate through and utilises colours well. Please create this login and sign up pages"
+
+#### Course Page
+
+"Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. For the course page, we need to add a course overview (this will be determined by the login info but right now you can add placeholders) that has the name of the course at the top and then dropdowns underneath of all their modules along with information about their weightings and assessment criteria - one that is modern, intuitive for the student to navigate through and utilises colours well. Please create this section on the course page"
+
+#### Societies Page
+
+"Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. For the course page, we need to add a societies overview (for now you can add placeholders) that has dropdowns underneath of all the societies the student is a part of with information and at the bottom a feed displaying different instagram posts that will be passed through by an url in a carousel - one that is modern, intuitive for the student to navigate through and utilises colours well. Please create this section on the societies page"
+
+#### Learning Page
+
+"Our website application, The Hub, is a student-centric platform that collates information about the students module, assignments and societies to create a centric and simplified view for the student of their overall student life and commitments. For the learning page, we need to add a dropdown view similar to the courses page (for now you can add placeholders) that with each dropdown has a little video gallery of all the lectures related to that module, a summary of different assignment coming up with links to their submission portals and underneath a module debrief section that contains info about the lecturer and what room[s] the lecture takes place in - one that is modern, intuitive for the student to navigate through and utilises colours well. Please create this section on the my learning page"
+
 ### Online Sources
 
 https://www.geeksforgeeks.org/html/html-cheat-sheet/

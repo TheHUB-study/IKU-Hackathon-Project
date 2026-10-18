@@ -2,14 +2,209 @@
 <body>
     {{template "nav" . }}
 
-    <main>
-        <section>
-            <h1>My Learning</h1>
-            <p>Contains all the information you need to know about lectures, assignments and blah...</p>
+    <main class="learning-page">
+        <section class="learning-hero">
+            <div>
+                <span class="course-hero__eyebrow">Study</span>
+                <h1>My Learning</h1>
+                <p>Lectures, assignments and all things study-wise.</p>
+            </div>
         </section>
 
-        <section>
-            <p>This is the main body part of the website</p>
+        <section class="learning-content" aria-labelledby="learning-modules-heading">
+            <div class="learning-content__heading">
+                <div>
+                    <span class="eyebrow">Pick up where you left off</span>
+                    <h2 id="learning-modules-heading">Your modules</h2>
+                </div>
+            </div>
+
+            <div class="learning-modules">
+                <details class="learning-module" open>
+                    <summary class="learning-module__summary">
+                        <span class="learning-module__number" aria-hidden="true">01</span>
+                        <span class="learning-module__title">
+                            <strong>Engineering Mathematics</strong>
+                            <span>15 credits <span aria-hidden="true">·</span> 2 lecture recordings</span>
+                        </span>
+                        <span class="learning-module__next">
+                            <span class="learning-module__next-dot" aria-hidden="true"></span>
+                            Next: Problem set 2
+                        </span>
+                    </summary>
+                    <div class="learning-module__panel">
+                        <div class="learning-module__resources">
+                            <section class="learning-block" aria-labelledby="math-lectures">
+                                <div class="learning-block__heading">
+                                    <div>
+                                        <span class="learning-block__eyebrow">Watch &amp; recap</span>
+                                        <h3 id="math-lectures">Lecture recordings</h3>
+                                    </div>
+                                    <span class="learning-block__count">2 videos</span>
+                                </div>
+                                <div class="learning-video-gallery">
+                                    <article class="learning-video learning-video--blue">
+                                        <video class="learning-video__player" controls preload="none" aria-label="Play Calculus: the essentials, lecture 1"><source src="assets/video/engineering-mathematics-lecture-01.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+                                        <div class="learning-video__info"><strong>Calculus: the essentials</strong><span>Lecture 01 <b>·</b> 42 min</span></div>
+                                    </article>
+                                    <article class="learning-video learning-video--violet">
+                                        <video class="learning-video__player" controls preload="none" aria-label="Play Vectors and linear algebra, lecture 2"><source src="assets/video/engineering-mathematics-lecture-02.mp4" type="video/mp4">Your browser does not support embedded video.</video>
+                                        <div class="learning-video__info"><strong>Vectors &amp; linear algebra</strong><span>Lecture 02 <b>·</b> 36 min</span></div>
+                                    </article>
+                                </div>
+                            </section>
+
+                            <section class="learning-block" aria-labelledby="math-assignments">
+                                <div class="learning-block__heading">
+                                    <div>
+                                        <span class="learning-block__eyebrow">Stay on track</span>
+                                        <h3 id="math-assignments">Upcoming assignments</h3>
+                                    </div>
+                                    <span class="learning-block__count">1 due soon</span>
+                                </div>
+                                <article class="learning-assignment">
+                                    <span class="learning-assignment__date"><strong>24</strong><small>OCT</small></span>
+                                    <div class="learning-assignment__details"><strong>Problem set 2</strong><span>Due 24 October <b>·</b> Coursework</span></div>
+                                    <a class="learning-assignment__link" href="https://example.com/submit/math-problem-set-2">Portal <span aria-hidden="true">↗</span></a>
+                                </article>
+                            </section>
+                        </div>
+
+                        <aside class="learning-debrief" aria-label="Engineering Mathematics module details">
+                            <div class="learning-debrief__icon" aria-hidden="true">✦</div>
+                            <div class="learning-debrief__intro">
+                                <span class="learning-block__eyebrow">Your module debrief</span>
+                                <h3>Good to know</h3>
+                            </div>
+                            <div class="learning-debrief__item"><span>Lecturer</span><strong>Dr. Amara Okafor</strong><small>Office hours: Tuesday, 13:00-14:00</small></div>
+                            <div class="learning-debrief__item"><span>Lecture location</span><strong>Lecture Theatre 2</strong><small>Mondays, 09:00-10:30 <b>·</b> North Building</small></div>
+                        </aside>
+                    </div>
+                </details>
+
+                <details class="learning-module">
+                    <summary class="learning-module__summary">
+                        <span class="learning-module__number" aria-hidden="true">02</span>
+                        <span class="learning-module__title">
+                            <strong>Circuits and Systems</strong>
+                            <span>15 credits <span aria-hidden="true">·</span> 2 lecture recordings</span>
+                        </span>
+                        <span class="learning-module__next">
+                            <span class="learning-module__next-dot learning-module__next-dot--teal" aria-hidden="true"></span>
+                            Next: Lab report 1
+                        </span>
+                    </summary>
+                    <div class="learning-module__panel">
+                        <div class="learning-module__resources">
+                            <section class="learning-block" aria-labelledby="circuits-lectures">
+                                <div class="learning-block__heading"><div><span class="learning-block__eyebrow">Watch &amp; recap</span><h3 id="circuits-lectures">Lecture recordings</h3></div><span class="learning-block__count">2 videos</span></div>
+                                <div class="learning-video-gallery">
+                                    <article class="learning-video learning-video--teal"><video class="learning-video__player" controls preload="none" aria-label="Play Analysing simple circuits, lecture 1"><source src="assets/video/circuits-and-systems-lecture-01.mp4" type="video/mp4">Your browser does not support embedded video.</video><div class="learning-video__info"><strong>Analysing simple circuits</strong><span>Lecture 01 <b>·</b> 39 min</span></div></article>
+                                    <article class="learning-video learning-video--coral"><video class="learning-video__player" controls preload="none" aria-label="Play Signals and system response, lecture 2"><source src="assets/video/circuits-and-systems-lecture-02.mp4" type="video/mp4">Your browser does not support embedded video.</video><div class="learning-video__info"><strong>Signals &amp; system response</strong><span>Lecture 02 <b>·</b> 45 min</span></div></article>
+                                </div>
+                            </section>
+                            <section class="learning-block" aria-labelledby="circuits-assignments">
+                                <div class="learning-block__heading"><div><span class="learning-block__eyebrow">Stay on track</span><h3 id="circuits-assignments">Upcoming assignments</h3></div><span class="learning-block__count">1 due soon</span></div>
+                                <article class="learning-assignment"><span class="learning-assignment__date learning-assignment__date--teal"><strong>29</strong><small>OCT</small></span><div class="learning-assignment__details"><strong>Lab report 1</strong><span>Due 29 October <b>·</b> Lab report</span></div><a class="learning-assignment__link" href="https://example.com/submit/circuits-lab-report-1">Portal <span aria-hidden="true">↗</span></a></article>
+                            </section>
+                        </div>
+                        <aside class="learning-debrief" aria-label="Circuits and Systems module details">
+                            <div class="learning-debrief__icon learning-debrief__icon--teal" aria-hidden="true">⌁</div>
+                            <div class="learning-debrief__intro"><span class="learning-block__eyebrow">Your module debrief</span><h3>Good to know</h3></div>
+                            <div class="learning-debrief__item"><span>Lecturer</span><strong>Prof. Daniel Chen</strong><small>Office hours: Wednesday, 12:00-13:00</small></div>
+                            <div class="learning-debrief__item"><span>Lecture location</span><strong>Blackett 1004</strong><small>Tuesdays, 11:00-12:00 <b>·</b> Blackett Building</small></div>
+                        </aside>
+                    </div>
+                </details>
+
+                <details class="learning-module">
+                    <summary class="learning-module__summary">
+                        <span class="learning-module__number" aria-hidden="true">03</span>
+                        <span class="learning-module__title"><strong>Digital Electronics</strong><span>15 credits <span aria-hidden="true">·</span> 2 lecture recordings</span></span>
+                        <span class="learning-module__next"><span class="learning-module__next-dot learning-module__next-dot--violet" aria-hidden="true"></span>Next: Logic design task</span>
+                    </summary>
+                    <div class="learning-module__panel">
+                        <div class="learning-module__resources">
+                            <section class="learning-block" aria-labelledby="digital-lectures">
+                                <div class="learning-block__heading"><div><span class="learning-block__eyebrow">Watch &amp; recap</span><h3 id="digital-lectures">Lecture recordings</h3></div><span class="learning-block__count">2 videos</span></div>
+                                <div class="learning-video-gallery">
+                                    <article class="learning-video learning-video--violet"><video class="learning-video__player" controls preload="none" aria-label="Play Logic gates and Boolean algebra, lecture 1"><source src="assets/video/digital-electronics-lecture-01.mp4" type="video/mp4">Your browser does not support embedded video.</video><div class="learning-video__info"><strong>Logic gates &amp; Boolean algebra</strong><span>Lecture 01 <b>·</b> 41 min</span></div></article>
+                                    <article class="learning-video learning-video--blue"><video class="learning-video__player" controls preload="none" aria-label="Play Introduction to processors, lecture 2"><source src="assets/video/digital-electronics-lecture-02.mp4" type="video/mp4">Your browser does not support embedded video.</video><div class="learning-video__info"><strong>Introduction to processors</strong><span>Lecture 02 <b>·</b> 34 min</span></div></article>
+                                </div>
+                            </section>
+                            <section class="learning-block" aria-labelledby="digital-assignments">
+                                <div class="learning-block__heading"><div><span class="learning-block__eyebrow">Stay on track</span><h3 id="digital-assignments">Upcoming assignments</h3></div><span class="learning-block__count">1 due soon</span></div>
+                                <article class="learning-assignment"><span class="learning-assignment__date learning-assignment__date--violet"><strong>03</strong><small>NOV</small></span><div class="learning-assignment__details"><strong>Logic design task</strong><span>Due 3 November <b>·</b> Design project</span></div><a class="learning-assignment__link" href="https://example.com/submit/digital-logic-design">Portal <span aria-hidden="true">↗</span></a></article>
+                            </section>
+                        </div>
+                        <aside class="learning-debrief" aria-label="Digital Electronics module details">
+                            <div class="learning-debrief__icon learning-debrief__icon--violet" aria-hidden="true">⌘</div>
+                            <div class="learning-debrief__intro"><span class="learning-block__eyebrow">Your module debrief</span><h3>Good to know</h3></div>
+                            <div class="learning-debrief__item"><span>Lecturer</span><strong>Dr. Sofia Patel</strong><small>Office hours: Thursday, 10:00-11:00</small></div>
+                            <div class="learning-debrief__item"><span>Lecture location</span><strong>Lecture Theatre 1</strong><small>Wednesdays, 10:00-11:30 <b>·</b> East Wing</small></div>
+                        </aside>
+                    </div>
+                </details>
+
+                <details class="learning-module">
+                    <summary class="learning-module__summary">
+                        <span class="learning-module__number" aria-hidden="true">04</span>
+                        <span class="learning-module__title"><strong>Programming for Engineers</strong><span>15 credits <span aria-hidden="true">·</span> 2 lecture recordings</span></span>
+                        <span class="learning-module__next"><span class="learning-module__next-dot" aria-hidden="true"></span>Next: Python coursework</span>
+                    </summary>
+                    <div class="learning-module__panel">
+                        <div class="learning-module__resources">
+                            <section class="learning-block" aria-labelledby="programming-lectures">
+                                <div class="learning-block__heading"><div><span class="learning-block__eyebrow">Watch &amp; recap</span><h3 id="programming-lectures">Lecture recordings</h3></div><span class="learning-block__count">2 videos</span></div>
+                                <div class="learning-video-gallery">
+                                    <article class="learning-video learning-video--blue"><video class="learning-video__player" controls preload="none" aria-label="Play Python: your first program, lecture 1"><source src="assets/video/programming-for-engineers-lecture-01.mp4" type="video/mp4">Your browser does not support embedded video.</video><div class="learning-video__info"><strong>Python: your first program</strong><span>Lecture 01 <b>·</b> 37 min</span></div></article>
+                                    <article class="learning-video learning-video--teal"><video class="learning-video__player" controls preload="none" aria-label="Play Functions and problem solving, lecture 2"><source src="assets/video/programming-for-engineers-lecture-02.mp4" type="video/mp4">Your browser does not support embedded video.</video><div class="learning-video__info"><strong>Functions &amp; problem solving</strong><span>Lecture 02 <b>·</b> 43 min</span></div></article>
+                                </div>
+                            </section>
+                            <section class="learning-block" aria-labelledby="programming-assignments">
+                                <div class="learning-block__heading"><div><span class="learning-block__eyebrow">Stay on track</span><h3 id="programming-assignments">Upcoming assignments</h3></div><span class="learning-block__count">1 due soon</span></div>
+                                <article class="learning-assignment"><span class="learning-assignment__date"><strong>07</strong><small>NOV</small></span><div class="learning-assignment__details"><strong>Python coursework</strong><span>Due 7 November <b>·</b> Individual coding task</span></div><a class="learning-assignment__link" href="https://example.com/submit/python-coursework">Portal <span aria-hidden="true">↗</span></a></article>
+                            </section>
+                        </div>
+                        <aside class="learning-debrief" aria-label="Programming for Engineers module details">
+                            <div class="learning-debrief__icon" aria-hidden="true">{ }</div>
+                            <div class="learning-debrief__intro"><span class="learning-block__eyebrow">Your module debrief</span><h3>Good to know</h3></div>
+                            <div class="learning-debrief__item"><span>Lecturer</span><strong>Dr. Theo Williams</strong><small>Office hours: Monday, 14:00-15:00</small></div>
+                            <div class="learning-debrief__item"><span>Lecture location</span><strong>Lecture Theatre 2</strong><small>Thursdays, 09:00-10:30 <b>·</b> North Building</small></div>
+                        </aside>
+                    </div>
+                </details>
+
+                <details class="learning-module">
+                    <summary class="learning-module__summary">
+                        <span class="learning-module__number" aria-hidden="true">05</span>
+                        <span class="learning-module__title"><strong>Engineering Design Project</strong><span>60 credits <span aria-hidden="true">·</span> 2 lecture recordings</span></span>
+                        <span class="learning-module__next"><span class="learning-module__next-dot learning-module__next-dot--teal" aria-hidden="true"></span>Next: Project brief</span>
+                    </summary>
+                    <div class="learning-module__panel">
+                        <div class="learning-module__resources">
+                            <section class="learning-block" aria-labelledby="design-lectures">
+                                <div class="learning-block__heading"><div><span class="learning-block__eyebrow">Watch &amp; recap</span><h3 id="design-lectures">Lecture recordings</h3></div><span class="learning-block__count">2 videos</span></div>
+                                <div class="learning-video-gallery">
+                                    <article class="learning-video learning-video--coral"><video class="learning-video__player" controls preload="none" aria-label="Play From brief to first concept, lecture 1"><source src="assets/video/engineering-design-project-lecture-01.mp4" type="video/mp4">Your browser does not support embedded video.</video><div class="learning-video__info"><strong>From brief to first concept</strong><span>Lecture 01 <b>·</b> 32 min</span></div></article>
+                                    <article class="learning-video learning-video--teal"><video class="learning-video__player" controls preload="none" aria-label="Play Prototyping as a team, lecture 2"><source src="assets/video/engineering-design-project-lecture-02.mp4" type="video/mp4">Your browser does not support embedded video.</video><div class="learning-video__info"><strong>Prototyping as a team</strong><span>Lecture 02 <b>·</b> 40 min</span></div></article>
+                                </div>
+                            </section>
+                            <section class="learning-block" aria-labelledby="design-assignments">
+                                <div class="learning-block__heading"><div><span class="learning-block__eyebrow">Stay on track</span><h3 id="design-assignments">Upcoming assignments</h3></div><span class="learning-block__count">1 due soon</span></div>
+                                <article class="learning-assignment"><span class="learning-assignment__date learning-assignment__date--teal"><strong>12</strong><small>NOV</small></span><div class="learning-assignment__details"><strong>Project concept brief</strong><span>Due 12 November <b>·</b> Team submission</span></div><a class="learning-assignment__link" href="https://example.com/submit/design-concept-brief">Portal <span aria-hidden="true">↗</span></a></article>
+                            </section>
+                        </div>
+                        <aside class="learning-debrief" aria-label="Engineering Design Project module details">
+                            <div class="learning-debrief__icon learning-debrief__icon--teal" aria-hidden="true">✧</div>
+                            <div class="learning-debrief__intro"><span class="learning-block__eyebrow">Your module debrief</span><h3>Good to know</h3></div>
+                            <div class="learning-debrief__item"><span>Lecturer</span><strong>Prof. Maya Thompson</strong><small>Office hours: Friday, 11:00-12:00</small></div>
+                            <div class="learning-debrief__item"><span>Lecture location</span><strong>Design Studio 3.12</strong><small>Fridays, 11:00-12:00 <b>·</b> Innovation Centre</small></div>
+                        </aside>
+                    </div>
+                </details>
+            </div>
+            <p class="learning-content__note">Sample module details, video file paths and portal URLs are placeholders. Add the MP4 files to <code>assets/video/</code> and replace these details with your course's current information.</p>
         </section>
     </main>
 

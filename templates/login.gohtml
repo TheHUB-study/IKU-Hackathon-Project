@@ -1,0 +1,49 @@
+{{template "header" .Title}}
+<body>
+    {{template "nav" . }}
+
+    <main class="auth-page">
+        <section class="auth-card" aria-labelledby="auth-title">
+            <div class="auth-card__aside">
+                <a class="auth-card__brand" href="index.html">The Hub</a>
+                <div>
+                    <span class="auth-card__eyebrow">Your student life, together</span>
+                    <h2>Everything in one place. More room to focus on what matters.</h2>
+                </div>
+                <p>Bring your course, deadlines and community into view.</p>
+            </div>
+
+            <div class="auth-card__content">
+                <span class="eyebrow">Welcome back</span>
+                <h1 id="auth-title">Log in to The Hub</h1>
+                <p class="auth-card__description">Pick up where you left off with your student life.</p>
+
+                <form class="auth-form" method="post" data-auth-form>
+                    <label class="auth-field">
+                        <span>Email address</span>
+                        <input type="email" name="email" autocomplete="email" placeholder="you@university.ac.uk" required>
+                    </label>
+
+                    <label class="auth-field">
+                        <span>Password</span>
+                        <input type="password" name="password" autocomplete="current-password" placeholder="Enter your password" required>
+                    </label>
+
+                    <div class="auth-form__options">
+                        <label class="auth-checkbox">
+                            <input type="checkbox" name="remember">
+                            <span>Keep me logged in</span>
+                        </label>
+                    </div>
+
+                    <button class="button button--primary auth-form__submit" type="submit">Login</button>
+                    <p class="auth-form__message" data-auth-message role="status" aria-live="polite" hidden></p>
+                </form>
+
+                <p class="auth-card__switch">New to The Hub? <a href="signup.html">Create an account</a></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/auth-forms.js" defer></script>
+{{template "footer" . }}

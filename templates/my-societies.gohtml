@@ -3,14 +3,184 @@
     {{template "nav" . }}
 
     <main>
-        <section>
+        <section class="societies-hero">
+            <span class="course-hero__eyebrow">Community and Activity</span>
             <h1>My Societies</h1>
-            <p>Page containing all the information about events, highlights and blah...</p>
+            <p>Events, highlights and ways to keep the vibes high.</p>
         </section>
 
-        <section>
-            <p>This is the main body part of the website</p>
+        <section class="societies-content" aria-labelledby="societies-heading">
+            <div class="society-overview" aria-label="Your society summary">
+                <div class="society-overview__item">
+                    <span class="society-overview__value">3</span>
+                    <span class="society-overview__label">Societies you're part of</span>
+                </div>
+                <div class="society-overview__item">
+                    <span class="society-overview__value">3</span>
+                    <span class="society-overview__label">Upcoming meet-ups</span>
+                </div>
+                <div class="society-overview__item">
+                    <span class="society-overview__value">Careers & Coffee</span>
+                    <span class="society-overview__label">Your next society event</span>
+                </div>
+            </div>
+
+            <div class="course-modules__heading">
+                <div>
+                    <h2 id="societies-heading">Society overview</h2>
+                </div>
+            </div>
+
+            <div class="society-list">
+                <details class="society-card" open>
+                    <summary class="society-card__summary">
+                        <span class="society-card__icon society-card__icon--blue" aria-hidden="true">WE</span>
+                        <span class="society-card__title">
+                            <strong>Women in Engineering</strong>
+                            <span>Community · Careers · Engineering</span>
+                        </span>
+                        <span class="society-card__badge">Member</span>
+                        <span class="society-card__toggle" aria-hidden="true"></span>
+                    </summary>
+                    <div class="society-card__details">
+                        <p class="society-card__description">A welcoming space to connect with fellow engineers, share experiences and explore opportunities in STEM.</p>
+                        <div class="society-card__info">
+                            <div>
+                                <span class="society-card__label">Regular meet-up</span>
+                                <strong>Wednesdays · 17:00</strong>
+                            </div>
+                            <div>
+                                <span class="society-card__label">Coming up</span>
+                                <strong>Careers &amp; Coffee · Thurs 22 Oct</strong>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="society-card">
+                    <summary class="society-card__summary">
+                        <span class="society-card__icon society-card__icon--teal" aria-hidden="true">PS</span>
+                        <span class="society-card__title">
+                            <strong>Photography Society</strong>
+                            <span>Creative · Social · All skill levels</span>
+                        </span>
+                        <span class="society-card__badge society-card__badge--teal">Member</span>
+                        <span class="society-card__toggle" aria-hidden="true"></span>
+                    </summary>
+                    <div class="society-card__details">
+                        <p class="society-card__description">Bring a camera or just your phone. Join photo walks, learn new techniques and share the way you see campus.</p>
+                        <div class="society-card__info">
+                            <div>
+                                <span class="society-card__label">Regular meet-up</span>
+                                <strong>Thursdays · 16:30</strong>
+                            </div>
+                            <div>
+                                <span class="society-card__label">Coming up</span>
+                                <strong>Golden-hour Photo Walk · Sun 25 Oct</strong>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="society-card">
+                    <summary class="society-card__summary">
+                        <span class="society-card__icon society-card__icon--purple" aria-hidden="true">DS</span>
+                        <span class="society-card__title">
+                            <strong>Dance Society</strong>
+                            <span>Movement · Music · Community</span>
+                        </span>
+                        <span class="society-card__badge society-card__badge--purple">Member</span>
+                        <span class="society-card__toggle" aria-hidden="true"></span>
+                    </summary>
+                    <div class="society-card__details">
+                        <p class="society-card__description">Find your rhythm with friendly sessions for beginners and experienced dancers, from trying a new style to performing together.</p>
+                        <div class="society-card__info">
+                            <div>
+                                <span class="society-card__label">Regular meet-up</span>
+                                <strong>Mondays · 18:00</strong>
+                            </div>
+                            <div>
+                                <span class="society-card__label">Coming up</span>
+                                <strong>Taster Session · Mon 19 Oct</strong>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section class="society-feed-section" aria-labelledby="society-feed-heading">
+            <div class="society-feed__heading">
+                <div>
+                    <span class="eyebrow">From your societies</span>
+                    <h2 id="society-feed-heading">The latest on Instagram</h2>
+                    <p>Little snapshots from the communities that make campus yours.</p>
+                </div>
+                <div class="society-feed__controls" role="group" aria-label="Instagram post carousel controls">
+                    <button class="society-feed__arrow" type="button" data-society-previous aria-label="Previous post">&larr;</button>
+                    <button class="society-feed__arrow" type="button" data-society-next aria-label="Next post">&rarr;</button>
+                </div>
+            </div>
+
+            <div class="society-feed__carousel" data-society-carousel role="region" aria-roledescription="carousel" aria-label="Society Instagram posts" tabindex="0">
+                <div class="society-feed__track">
+                    <article class="society-post" data-society-post data-post-url="" role="group" aria-roledescription="slide" aria-label="1 of 3">
+                        <div class="society-post__visual society-post__visual--blue" aria-hidden="true">
+                            <span class="society-post__visual-label">MAKE SPACE<br>TO GROW</span>
+                            <span class="society-post__visual-mark">WE</span>
+                        </div>
+                        <div class="society-post__body">
+                            <div class="society-post__meta"><span>Women in Engineering</span><span>Society moment</span></div>
+                            <h3>Big ideas, better together.</h3>
+                            <p>Meet the people building community and creating new possibilities in engineering.</p>
+                            <span class="society-post__placeholder" data-post-link-placeholder>Instagram post URL coming soon</span>
+                        </div>
+                        <iframe class="society-post__embed" data-post-embed title="Instagram post from Women in Engineering" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" hidden></iframe>
+                        <a class="society-post__link" data-post-link href="#" target="_blank" rel="noopener noreferrer" hidden>Open this post on Instagram <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+
+                    <article class="society-post" data-society-post data-post-url="" role="group" aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true" inert>
+                        <div class="society-post__visual society-post__visual--teal" aria-hidden="true">
+                            <span class="society-post__visual-label">FIND YOUR<br>FRAME</span>
+                            <span class="society-post__visual-mark">PS</span>
+                        </div>
+                        <div class="society-post__body">
+                            <div class="society-post__meta"><span>Photography Society</span><span>Society moment</span></div>
+                            <h3>See campus in a new light.</h3>
+                            <p>Grab your camera, bring a friend and find a fresh perspective on a familiar place.</p>
+                            <span class="society-post__placeholder" data-post-link-placeholder>Instagram post URL coming soon</span>
+                        </div>
+                        <iframe class="society-post__embed" data-post-embed title="Instagram post from Photography Society" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" hidden></iframe>
+                        <a class="society-post__link" data-post-link href="#" target="_blank" rel="noopener noreferrer" hidden>Open this post on Instagram <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+
+                    <article class="society-post" data-society-post data-post-url="" role="group" aria-roledescription="slide" aria-label="3 of 3" aria-hidden="true" inert>
+                        <div class="society-post__visual society-post__visual--purple" aria-hidden="true">
+                            <span class="society-post__visual-label">MOVE<br>TOGETHER</span>
+                            <span class="society-post__visual-mark">DS</span>
+                        </div>
+                        <div class="society-post__body">
+                            <div class="society-post__meta"><span>Dance Society</span><span>Society moment</span></div>
+                            <h3>There’s a place for every move.</h3>
+                            <p>Come as you are, try something new and make a little room for joy in your week.</p>
+                            <span class="society-post__placeholder" data-post-link-placeholder>Instagram post URL coming soon</span>
+                        </div>
+                        <iframe class="society-post__embed" data-post-embed title="Instagram post from Dance Society" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" hidden></iframe>
+                        <a class="society-post__link" data-post-link href="#" target="_blank" rel="noopener noreferrer" hidden>Open this post on Instagram <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+                </div>
+            </div>
+
+            <div class="society-feed__footer">
+                <div class="society-feed__indicators" role="group" aria-label="Choose an Instagram post">
+                    <button class="society-feed__indicator" type="button" data-society-slide="0" aria-label="Show post 1" aria-pressed="true"></button>
+                    <button class="society-feed__indicator" type="button" data-society-slide="1" aria-label="Show post 2" aria-pressed="false"></button>
+                    <button class="society-feed__indicator" type="button" data-society-slide="2" aria-label="Show post 3" aria-pressed="false"></button>
+                </div>
+                <span class="society-feed__status" data-society-status aria-live="polite">1 / 3</span>
+            </div>
         </section>
     </main>
 
+    <script src="assets/js/my-societies.js" defer></script>
 {{template "footer" . }}
