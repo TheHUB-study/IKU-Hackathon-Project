@@ -12,6 +12,7 @@ import (
 	"net/http"
 	"net/url"
 	"os"
+	"path/filepath"
 	"strings"
 	"time"
 )
@@ -82,10 +83,25 @@ func main() {
 		{name: "my-societies", title: "Societies Hub"},
 	}
 
-	for _, item := range pages {
-		if err := createPageFromTemplate(item.name, page{Page: item.name, Title: item.title}); err != nil {
+	if len(os.Args) > 1 && os.Args[1] == "build" {
+		if err := os.MkdirAll("dist", 0755); err != nil {
 			log.Fatal(err)
 		}
+		if err := renderPages(pages, "dist"); err != nil {
+			log.Fatal(err)
+		}
+		if err := os.MkdirAll(filepath.Join("dist", "assets"), 0755); err != nil {
+			log.Fatal(err)
+		}
+		if err := os.CopyFS(filepath.Join("dist", "assets"), os.DirFS("assets")); err != nil {
+			log.Fatal(err)
+		}
+		log.Print("Static site built in dist/")
+		return
+	}
+
+	if err := renderPages(pages, "."); err != nil {
+		log.Fatal(err)
 	}
 
 	mux := http.NewServeMux()
@@ -109,8 +125,20 @@ func main() {
 	}
 }
 
-func createPageFromTemplate(name string, data page) error {
-	file, err := os.Create(fmt.Sprintf("%s.html", name))
+func renderPages(pages []struct {
+	name  string
+	title string
+}, outputDir string) error {
+	for _, item := range pages {
+		if err := createPageFromTemplate(item.name, page{Page: item.name, Title: item.title}, outputDir); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
+func createPageFromTemplate(name string, data page, outputDir string) error {
+	file, err := os.Create(filepath.Join(outputDir, fmt.Sprintf("%s.html", name)))
 	if err != nil {
 		return err
 	}
