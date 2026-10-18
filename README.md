@@ -16,7 +16,7 @@ We have created our Minimal Viable Product where two fake users are able to logi
 
 Our next steps involve working to integrate various university systems (specifically systems used by our partner universities) into the platform.
 
-## References (Harvard)
+## References
 
 ### AI Prompts
 
